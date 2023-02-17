@@ -1,0 +1,19 @@
+﻿@model List<Comic>
+
+    <a asp-controller="Comic" asp-action="Create">Crear nuevo comic</a>
+  <ul>
+    @foreach(Comic comic in Model)
+    {
+        <li style="display:inline-block">
+           
+            <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="@comic.Imagen" alt="Card image cap">
+                  <div class="card-body">
+                <h5 class="card-title">@comic.Nombre</h5>
+                <p class="card-text">@comic.Descripcion</p>
+               
+              </div>
+            </div>
+        </li>
+    }
+</ul>
